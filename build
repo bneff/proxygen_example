@@ -1,0 +1,15 @@
+g++ -std=c++11 \
+src/DemoServer.cpp \
+src/DemoHandler.cpp \
+-I./usr/local/include/proxygen \
+-I./usr/local/include/folly \
+-I./usr/include/gflags \
+-L./3rdparty/openssl/ \
+-L/usr/lib/x86_64-linux-gnu/ \
+-Wl,-rpath=./3rdparty/openssl/ \
+-lfolly \
+-lproxygenhttpserver \
+-lpthread \
+-lgflags \
+-lglog \
+-o server
